@@ -1,0 +1,97 @@
+.title{
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.reviews-container{
+    display: flex;
+    justify-content: center;
+}
+
+.previous-person, .next-person{
+    display: flex;
+    height: fit-content;
+    margin: auto 0;
+    background-color: gray;
+    border: none;
+    padding: .5rem .5rem;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 300ms;
+
+}
+
+.previous-person:hover, .next-person:hover{
+    background-color: #ba5d2c;
+}
+
+.btn-icon{
+    font-size: 1.5rem;
+    color: white;
+
+}
+.review-people{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    min-height: 600px;
+    position: relative;
+    overflow-x: hidden;
+}
+.person-container{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transition: all 500ms;
+    opacity: 0;
+
+}
+
+.review-person-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1.8rem;
+    border: rgb(156, 156, 156) solid 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.review-person-name{
+    text-transform: uppercase;
+    color: #ba5d2c;
+    margin-top: 1.5rem;
+}
+
+.review-person-job{
+    text-transform: capitalize;
+    margin-top: .3rem;
+}
+
+.review-person-info{
+    line-height: 1.5rem;
+    color: rgb(70, 69, 69);
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.quote{
+    color: #ba5d2c;
+    font-size: 3rem;
+    margin-top: 1.5rem;
+}
+
+.person-container.active{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.person-container.next{
+    transform: translateX(100%)
+}
+
+.person-container.last{
+    transform: translateX(-100%)
+}
